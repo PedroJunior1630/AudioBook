@@ -1,8 +1,14 @@
 const botaoPlayPause = document.getElementById("play-pause");
+const botaoAvanca = document.getElementById("proximo");
+const botaoVolta = document.getElementById("anterior");
 const audioCapitulo = document.getElementById("audio-capitulo");
 
 const numeroCapitulos = 10;
 let taTocando = 0;
+
+let numCap = 10;
+let capAtual = 1;
+
 
 function tocarFaixa(){
     audioCapitulo.play();
@@ -26,5 +32,23 @@ function tocarOuPausar(){
     }
 }
 
+
+function proximaFaixa(){
+    if(capAtual === numCap){
+        capAtual = 1;
+    }else{
+        capAtual += 1;
+    }
+    audioCapitulo.src = "books/dom-casmurro/" + capAtual + ".mp3";
+    console.log(audioCapitulo);
+}
+
+function voltaFaixa(){
+    if(capAtual == =)
+}
+
 botaoPlayPause.addEventListener("click",tocarOuPausar);
+botaoAvanca.addEventListener("click",proximaFaixa);
+
+
 
