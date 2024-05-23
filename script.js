@@ -44,11 +44,18 @@ function proximaFaixa(){
 }
 
 function voltaFaixa(){
-    if(capAtual == =)
+    if(capAtual === 1){
+        capAtual = numCap;
+    }else{
+        capAtual -= 1;
+    }
+    audioCapitulo.src = "books/dom-casmurro/" + capAtual + ".mp3";
+    console.log(audioCapitulo);
 }
 
 botaoPlayPause.addEventListener("click",tocarOuPausar);
 botaoAvanca.addEventListener("click",proximaFaixa);
+botaoVolta.addEventListener("click", voltaFaixa);
 
 
 
